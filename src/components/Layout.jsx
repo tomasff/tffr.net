@@ -139,9 +139,15 @@ const Layout = ({ children }) => (
   <div>
     <Global styles={globalStyle} />
     <Helmet defer={false}>
-      <title>Tomás</title>
+      <title>Tomás Fernandes</title>
       <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" />
       <link rel="canonical" href="https://tomff.com" />
+      <meta name="author" content="Tomás Fernandes" />
+      <meta
+        name="description"
+        content="I'm a computer scientist at the University of Warwick with a passion for software engineering.
+        I'm particularly interested in the applications of AI/algorithms to analyze data on a large scale and advancements towards general-purpose AI."
+      />
     </Helmet>
     {children}
   </div>
