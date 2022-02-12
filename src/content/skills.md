@@ -1,5 +1,8 @@
 - Java
 - Python
+- Docker
+- Django
+- PostgreSQL
 - Linux
 - Git
 - LaTeX
