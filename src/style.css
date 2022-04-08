@@ -1,0 +1,6 @@
+.avatar {
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 50px;
+    border-radius: 100%;
+}
