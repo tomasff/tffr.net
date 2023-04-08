@@ -1,0 +1,29 @@
+languageCode = "en"
+languageName = "English"
+displayName = "EN"
+isoCode = "en"
+weight = 1
+rtl = false
+
+title = "Tomás Fernandes"
+description = "Computer scientist at the University of Warwick interested in distributed systems, machine learning on graphs, and multimodal learning."
+# copyright = "Copy, _right?_ :thinking_face:"
+
+dateFormat = "2 January 2006"
+
+[params]
+  mainSections = ["talks", "projects"]
+
+[author]
+  name = "Tomás Fernandes"
+  image = "img/author.jpeg"
+  headline = "Computer Scientist"
+  bio = "Computer Scientist at University of Warwick"
+  links = [
+     { email = "mailto:contact@tomff.com" },
+     { github = "https://github.com/tomasff" },
+     { linkedin = "https://www.linkedin.com/in/tomas-fernandes02/" },
+     { twitter = "https://twitter.com/tomasff02" },
+  #   { orcid = "https://orcid.org/userid" },
+  #   { researchgate = "https://www.researchgate.net/profile/username" },
+  ]
