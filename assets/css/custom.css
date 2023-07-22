@@ -1,6 +1,6 @@
-/* Increase the default font size */
 html {
     font-size: 13pt;
+    font-family: 'DM Sans', sans-serif;
 }
 
 nav {
