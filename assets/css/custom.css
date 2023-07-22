@@ -1,0 +1,8 @@
+/* Increase the default font size */
+html {
+    font-size: 13pt;
+}
+
+nav {
+    font-size: 16pt;
+}
