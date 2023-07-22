@@ -1,0 +1,22 @@
+/* Increase the default font size */
+html {
+    font-size: 13pt;
+}
+
+nav {
+    font-size: 16pt;
+}
+
+.mt-6 {
+    margin-top: 1.5rem
+}
+
+@media (min-width: 576px) {
+    .sm\:items-start {
+        align-items: flex-start;
+    }
+
+    .sm\:mt-0 {
+        margin-top: 0;
+    }
+}
