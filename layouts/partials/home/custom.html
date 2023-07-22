@@ -1,6 +1,6 @@
 <section class="flex">
-    <article class="flex max-w-prose flex-row">
-        <div class="flex-none pe-4 sm:pe-6">
+    <article class="flex max-w-prose flex-col items-center sm:items-start sm:flex-row">
+        <div class="flex-none sm:pe-6">
           {{ with .Site.Author.image }}
             {{ $authorImage := resources.Get . }}
             {{ if $authorImage }}
@@ -17,14 +17,14 @@
               />
             {{ end }}
           {{ end }}
-          <div class="mt-1 text-2xl">
-            {{ partialCached "author-links.html" . }}
-          </div>
         </div>
-        <div>
+        <div class="mt-6 sm:mt-0">
           <h2 class="text-2xl font-bold">Tomás Fernandes</h2>
           <div class="prose">
             {{ .Content | emojify }}
+          </div>
+          <div class="mt-1 text-2xl">
+            {{ partialCached "author-links.html" . }}
           </div>
         </div>
     </article>
