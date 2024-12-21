@@ -9,14 +9,14 @@ title = "Tomás Fernandes"
   isoCode = "en"
   mainSections = ["talks", "projects"]
   rtl = false
-  description = "Computer scientist at the University of Warwick interested in distributed systems, machine learning on graphs, and multimodal learning."
+  description = "Computer scientist interested in software engineering, distributed systems, and geometric deep learning."
   dateFormat = "2 January 2006"
 
 [author]
   name = "Tomás Fernandes"
   image = "img/author.jpeg"
-  headline = "Computer Scientist"
-  bio = "Computer Scientist at University of Warwick"
+  headline = "Computer Scientist & Software Engineer"
+  bio = "Computer Scientist & Software Engineer"
   links = [
     { github = "https://github.com/tomasff" },
     { x-twitter = "https://twitter.com/tomasff02" },
