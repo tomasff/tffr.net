@@ -21,7 +21,7 @@
               class="rounded-md" srcset="
               {{- (.Fill "200x200 smart").RelPermalink }}
               80w, {{- (.Fill "200x200 smart").RelPermalink }} 2x"
-              src="{{ (.Fill "200x200 smart").RelPermalink }}" width="80" height="80"
+              src="{{ (.Fill "200x200 smart").RelPermalink }}" width="60" height="80"
             {{ end }}
             {{ if $.Site.Params.enableImageLazyLoading | default true }}
               loading="lazy"
