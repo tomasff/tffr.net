@@ -1,6 +1,7 @@
 html {
     font-size: 13pt;
-    font-family: 'DM Sans', sans-serif;
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
 }
 
 nav {
