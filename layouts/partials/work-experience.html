@@ -1,0 +1,7 @@
+<!-- Modified https://github.com/jpanther/congo/blob/dev/layouts/partials/recent-articles.html -->
+{{ if .Site.Params.homepage.showRecent | default false }}
+  <h2 class="mt-8 text-2xl font-bold">Work experience</h2>
+  {{ range (sort (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) "Params.FromDate" "desc") }}
+    {{ partial "work-partial.html" . }}
+  {{ end }}
+{{ end }}

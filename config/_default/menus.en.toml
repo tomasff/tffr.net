@@ -11,19 +11,19 @@
 # ordered by weight from lowest to highest.
 
 [[main]]
-  name = "home"
+  name = "Tomás Fernandes"
   pageRef = "/"
   weight = 10
 
-[[main]]
-  name = "projects"
-  pageRef = "projects"
-  weight = 20
+# [[main]]
+#   name = "projects"
+#   pageRef = "projects"
+#   weight = 20
 
-[[main]]
-  name = "talks"
-  pageRef = "talks"
-  weight = 30
+# [[main]]
+#   name = "talks"
+#   pageRef = "talks"
+#   weight = 30
 
 # -- Footer Menu --
 # The footer menu is displayed at the bottom of the page, just before

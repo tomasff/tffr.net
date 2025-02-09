@@ -21,3 +21,11 @@ nav {
         margin-top: 0;
     }
 }
+
+.font-bold {
+    font-weight: 500;
+}
+
+.font-semibold {
+    font-weight: 500;
+}

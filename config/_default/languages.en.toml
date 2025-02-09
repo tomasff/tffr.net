@@ -7,10 +7,10 @@ title = "Tomás Fernandes"
 [params]
   displayName = "EN"
   isoCode = "en"
-  mainSections = ["talks", "projects"]
+  mainSections = ["work"]
   rtl = false
   description = "Computer scientist interested in software engineering, distributed systems, and geometric deep learning."
-  dateFormat = "2 January 2006"
+  dateFormat = "January 2006"
 
 [author]
   name = "Tomás Fernandes"
