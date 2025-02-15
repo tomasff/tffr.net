@@ -13,8 +13,13 @@
     {{ with .Site.Params.description }}"description": "{{ . | safeJS }}",{{ end }}
     {{ with .Site.LanguageCode }}"inLanguage": "{{ . }}",{{ end }}
     "url": {{ (site.GetPage "/").Permalink }},
+    "headline": "{{ .Site.Author.name | safeJS }}",
     {{ with .Site.Params.keywords }}"keywords": {{ . }},{{ end }}
     "publisher" : {
+      "@type": "Person",
+      "name": "{{ .Site.Author.name | safeJS }}"
+    },
+    "author": {
       "@type": "Person",
       "name": "{{ .Site.Author.name | safeJS }}"
     }
