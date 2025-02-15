@@ -1,7 +1,7 @@
 ---
 title: "About"
 slug: "about"
-date: 2024-12-21
+date: 2025-02-15
 showDate: false
 showReadingTime: false
 ---
