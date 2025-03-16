@@ -13,17 +13,38 @@
     rel="stylesheet"
 />
 <link
-    rel="stylesheet"
+    rel="preload"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css"
     integrity="sha512-v8QQ0YQ3H4K6Ic3PJkym91KoeNT5S3PnDKvqnwqFD1oiqIl653crGZplPdU5KKtHjO0QKcQ2aUlQZYjHczkmGw=="
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'"
 />
 <link
-    rel="stylesheet"
+    rel="preload"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css"
     integrity="sha512-58P9Hy7II0YeXLv+iFiLCv1rtLW47xmiRpC1oFafeKNShp8V5bKV/ciVtYqbk2YfxXQMt58DjNfkXFOn62xE+g=="
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'"
 />
+<noscript>
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css"
+        integrity="sha512-v8QQ0YQ3H4K6Ic3PJkym91KoeNT5S3PnDKvqnwqFD1oiqIl653crGZplPdU5KKtHjO0QKcQ2aUlQZYjHczkmGw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+</noscript>
+<noscript
+    ><link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css"
+        integrity="sha512-58P9Hy7II0YeXLv+iFiLCv1rtLW47xmiRpC1oFafeKNShp8V5bKV/ciVtYqbk2YfxXQMt58DjNfkXFOn62xE+g=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+/></noscript>
 {{ partialCached "head/css.html" . }} {{ partialCached "head/js.html" . }}
