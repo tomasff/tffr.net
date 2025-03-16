@@ -1,6 +1,6 @@
 <article class="work-experience">
     {{ range .Resources.ByType "image" }}
-        <img src="{{ (.Fill "200x200 smart").RelPermalink }}" width="60" height="60" loading="lazy"/>
+        <img src="{{ (.Fill "120x120 smart").RelPermalink }}" width="60" height="60" loading="lazy"/>
     {{ end }}
     <div>
         <h3><a href="{{ .Params.externalUrl }}">{{ .LinkTitle }}</a></h3>
