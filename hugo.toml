@@ -1,0 +1,18 @@
+baseURL = 'https://tffr.net/'
+languageCode = 'en-GB'
+title = 'Tomás Fernandes'
+theme = 'tomas'
+
+[params]
+description = 'Tomás Fernandes is a computer scientist and software engineer at Coinbase interested in software engineering, distributed systems, and geometric deep learning.'
+keywords = ['Tomas Fernandes', 'Tomás Fernandes', 'personal website']
+
+[params.author]
+name = 'Tomás Fernandes'
+image = 'img/author.jpeg'
+headline = 'Computer Scientist & Software Engineer'
+links = [
+    { github = 'https://github.com/tomasff' },
+    { x-twitter = 'https://twitter.com/tomasff02' },
+    { linkedin = 'https://www.linkedin.com/in/tomas-fernandes02/' },
+]

@@ -1,0 +1,37 @@
+{{ define "main" }}
+
+<section id="about">
+    {{ with .Site.Params.Author.image }}
+      {{ $authorImage := resources.Get . }}
+      {{ if $authorImage }}
+        {{ $authorImage := $authorImage.Fill "288x288" }}
+        <img
+            width="144"
+            height="144"
+            alt="{{ $.Site.Params.Author.name | default "Author" }}"
+            src="{{ $authorImage.RelPermalink }}"
+            loading="lazy"
+        />
+      {{ end }}
+    {{ end }}
+    <div>
+        <h2>About me</h2>
+        {{ .Content }}
+        <div id="links">
+            {{ range $links := .Site.Params.Author.links }}
+                {{ range $name, $url := $links }}
+                <a href="{{ $url }}"><i class="fa-brands fa-{{ $name }}"></i></a>
+                {{ end }}
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<h2>Posts</h2>
+Nothing here yet...
+
+<h2>Work Experience</h2>
+{{ range where site.RegularPages "Section" "work-experience" }}
+    {{ partial "work-experience.html" . }}
+{{ end }}
+{{ end }}

@@ -1,0 +1,14 @@
+<article class="work-experience">
+    {{ range .Resources.ByType "image" }}
+        <img src="{{ (.Fill "200x200 smart").RelPermalink }}" width="60" height="60" loading="lazy"/>
+    {{ end }}
+    <div>
+        <h3><a href="{{ .Params.externalUrl }}">{{ .LinkTitle }}</a></h3>
+        <div class="meta">
+            <p>{{ .Params.FromDate.Format "Jan 2006" }} &mdash; {{ default "Present" (.Params.ToDate.Format "Jan 2006") }}</p>
+            <p>{{ .Params.Location }}</p>
+        </div>
+
+        <p>{{ .Summary | markdownify }}</p>
+    </div>
+</article>
