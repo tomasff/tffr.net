@@ -75,6 +75,7 @@ jobs:
         id: deploy
         with:
           path-to-deploy: public
+          pin-name: tffr-net
           kubo-api-url: ${{ secrets.KUBO_API_URL }}
           kubo-api-auth: ${{ secrets.KUBO_API_AUTH }}
           github-token: ${{ github.token }}
