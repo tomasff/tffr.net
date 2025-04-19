@@ -1,0 +1,86 @@
+
+name: Deploy Hugo site to IPFS
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches:
+      - main
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+
+permissions:
+  contents: read
+  statuses: write
+
+concurrency:
+  group: "hugo-ipfs-deploy"
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: 0.145.0
+      HUGO_ENVIRONMENT: production
+      TZ: Europe/London
+    steps:
+      - name: Install Hugo CLI
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
+          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+      - name: Cache Restore
+        id: cache-restore
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            ${{ runner.temp }}/hugo_cache
+          key: hugo-${{ github.run_id }}
+          restore-keys:
+            hugo-
+      - name: Build with Hugo
+        run: |
+          hugo \
+            --gc \
+            --minify \
+            --cacheDir "${{ runner.temp }}/hugo_cache"
+      - name: Cache Save
+        id: cache-save
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            ${{ runner.temp }}/hugo_cache
+          key: ${{ steps.cache-restore.outputs.cache-primary-key }}
+
+  # Deployment job
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Connect to tailnet
+        uses: tailscale/github-action@v3
+        with:
+          oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
+          oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
+          use-cache: 'true'
+          tags: tag:ci
+          version: latest
+      - name: Deploy to IPFS
+        uses: ipfs/ipfs-deploy-action@v1
+        id: deploy
+        with:
+          path-to-deploy: public
+          kubo-api-url: ${{ secrets.KUBO_API_URL }}
+          kubo-api-auth: ${{ secrets.KUBO_API_AUTH }}
+        
