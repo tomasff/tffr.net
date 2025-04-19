@@ -24,7 +24,7 @@ defaults:
     shell: bash
 
 jobs:
-  build:
+  ipfs-deploy:
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.145.0
@@ -62,12 +62,6 @@ jobs:
           path: |
             ${{ runner.temp }}/hugo_cache
           key: ${{ steps.cache-restore.outputs.cache-primary-key }}
-
-  # Deployment job
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
       - name: Connect to tailnet
         uses: tailscale/github-action@v3
         with:
