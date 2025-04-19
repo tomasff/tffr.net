@@ -3,6 +3,9 @@ languageCode = 'en-GB'
 title = 'Tomás Fernandes'
 theme = 'tomas'
 
+[markup.goldmark.renderer]
+unsafe = true
+
 [params]
 description = 'Tomás Fernandes is a computer scientist and software engineer at Coinbase interested in software engineering, distributed systems, and geometric deep learning.'
 keywords = ['Tomas Fernandes', 'Tomás Fernandes', 'personal website']
