@@ -40,28 +40,12 @@ jobs:
         with:
           submodules: recursive
           fetch-depth: 0
-      - name: Cache Restore
-        id: cache-restore
-        uses: actions/cache/restore@v4
-        with:
-          path: |
-            ${{ runner.temp }}/hugo_cache
-          key: hugo-${{ github.run_id }}
-          restore-keys:
-            hugo-
       - name: Build with Hugo
         run: |
+          echo "relativeURLs=true" >> config.toml
           hugo \
             --gc \
-            --minify \
-            --cacheDir "${{ runner.temp }}/hugo_cache"
-      - name: Cache Save
-        id: cache-save
-        uses: actions/cache/save@v4
-        with:
-          path: |
-            ${{ runner.temp }}/hugo_cache
-          key: ${{ steps.cache-restore.outputs.cache-primary-key }}
+            --minify
       - name: Connect to tailnet
         uses: tailscale/github-action@v3
         with:
