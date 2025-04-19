@@ -42,7 +42,7 @@ jobs:
           fetch-depth: 0
       - name: Build with Hugo
         run: |
-          echo "relativeURLs=true" >> config.toml
+          echo 'relativeURLs = true' | cat - hugo.toml > temp && mv temp hugo.toml
           hugo \
             --gc \
             --minify
