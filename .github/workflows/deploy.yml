@@ -61,7 +61,7 @@ jobs:
           kubo-api-url: ${{ secrets.KUBO_API_URL }}
           kubo-api-auth: ${{ secrets.KUBO_API_AUTH }}
           github-token: ${{ github.token }}
-      - name: Publish to IPNS
+      - name: Publish to IPNS and copy to MFS
         run: |
           ipfs name publish ${{ steps.deploy.outputs.cid }} --api ${{ secrets.KUBO_API_URL }} --api-auth ${{ secrets.KUBO_API_AUTH }}
-          ipfs cp /ipfs/${{ steps.deploy.outputs.cid }} /tffr-net/ --api ${{ secrets.KUBO_API_URL }} --api-auth ${{ secrets.KUBO_API_AUTH }}
+          ipfs files cp /ipfs/${{ steps.deploy.outputs.cid }} /tffr-net/ --api ${{ secrets.KUBO_API_URL }} --api-auth ${{ secrets.KUBO_API_AUTH }}
