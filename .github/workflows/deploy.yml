@@ -58,7 +58,7 @@ jobs:
         with:
           path-to-deploy: public
           pin-name: tffr-net
-          ipfs-add-options: "--to-files /tffr-net"
+          ipfs-add-options: "--to-files /tffr-net/"
           kubo-api-url: ${{ secrets.KUBO_API_URL }}
           kubo-api-auth: ${{ secrets.KUBO_API_AUTH }}
           github-token: ${{ github.token }}
