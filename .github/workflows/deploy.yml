@@ -43,9 +43,7 @@ jobs:
       - name: Build with Hugo
         run: |
           echo 'relativeURLs = true' | cat - hugo.toml > temp && mv temp hugo.toml
-          hugo \
-            --gc \
-            --minify
+          hugo --minify
       - name: Connect to tailnet
         uses: tailscale/github-action@v3
         with:
