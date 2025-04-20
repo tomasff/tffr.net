@@ -98,7 +98,7 @@ li {
 
 a {
     color: #333;
-    text-decoration: underline #00e 2px solid;
+    text-decoration: underline #00e 2.5px dotted;
     transition: 0.3s;
 }
 
