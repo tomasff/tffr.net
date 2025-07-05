@@ -16,7 +16,7 @@ permissions:
   statuses: write
 
 concurrency:
-  group: "hugo-ipfs-deploy"
+  group: "hugo-build-and-upload"
   cancel-in-progress: false
 
 defaults:
@@ -24,7 +24,7 @@ defaults:
     shell: bash
 
 jobs:
-  ipfs-deploy:
+  build-and-upload:
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.145.0
