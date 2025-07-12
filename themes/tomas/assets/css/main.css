@@ -133,6 +133,18 @@ a:hover {
     font-size: 25px;
 }
 
+#about #links a svg {
+    width: 20px;
+    height: 20px;
+
+    fill: #333;
+    transition: 0.3s;
+}
+
+#about #links a svg:hover {
+    fill: #00e;
+}
+
 article.work-experience {
     display: flex;
     align-items: start;

@@ -20,7 +20,7 @@
         <div id="links">
             {{ range $links := .Site.Params.Author.links }}
                 {{ range $name, $url := $links }}
-                <a href="{{ $url }}"><i class="fa-brands fa-{{ $name }}"></i></a>
+                <a href="{{ $url }}">{{- partial (printf "icons/%s.svg" $name) -}}</a>
                 {{ end }}
             {{ end }}
         </div>
