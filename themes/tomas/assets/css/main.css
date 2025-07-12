@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Inter";
+    src: url("/font/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+}
+
 body {
     color: #333;
     margin: auto;
