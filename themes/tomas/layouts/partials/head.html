@@ -1,10 +1,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width" />
 <meta name="description" content="{{ .Site.Params.Author.name | safeJS }}" />
-<title>
-    {{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title
-    site.Title }}{{ end }}
-</title>
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
 {{ partialCached "head/schema.html" . }}
 
 <link rel="preload" href="/font/Inter-VariableFont_opsz,wght.ttf" as="font" type="font/ttf" crossorigin>
