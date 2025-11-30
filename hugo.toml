@@ -3,8 +3,21 @@ languageCode = 'en-GB'
 title = 'Tomás Fernandes'
 theme = 'tomas'
 
+[markup]
 [markup.goldmark.renderer]
 unsafe = true
+
+[markup.highlight]
+anchorLineNos = false
+codeFences = true
+guessSyntax = false
+lineAnchors = ''
+lineNoStart = 1
+lineNos = true
+lineNumbersInTable = true
+noClasses = true
+style = 'catppuccin-latte'
+tabWidth = 4
 
 [params]
 description = 'Tomás Fernandes is a computer scientist and software engineer at Coinbase interested in software engineering, distributed systems, and geometric deep learning.'

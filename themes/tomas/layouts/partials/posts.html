@@ -1,0 +1,15 @@
+<article class="post">
+    {{ range .Resources.ByType "image" }}
+        <img src="{{ (.Fill "256x256 smart").RelPermalink }}" width="256" height="256" loading="lazy"/>
+    {{ end }}
+    <div>
+        <h3><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
+        <div class="meta">
+            <time datetime="{{ .Date | time.Format "2006-01-02T15:04:05-07:00" }}">
+                {{ .Date | time.Format "Jan 2, 2006" }}
+            </time>
+        </div>
+
+        <p>{{ .Summary | markdownify }}</p>
+    </div>
+</article>
