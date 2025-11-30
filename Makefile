@@ -1,6 +1,11 @@
 dev:
-	hugo server --ignoreCache --noHTTPCache --disableFastRender
+	LOCATION="$(LOCATION)" hugo server --ignoreCache --noHTTPCache --disableFastRender
 
 deploy:
-	hugo --minify
+	LOCATION="$(LOCATION)" hugo --minify
 	rsync -rvz public/ $(TARGET):/usr/share/caddy/website/
+
+deploy-all:
+	$(MAKE) deploy TARGET=coruscant LOCATION="London, UK"
+	$(MAKE) deploy TARGET=fre-route LOCATION="Fremont, CA"
+	$(MAKE) deploy TARGET=ams-route LOCATION="Amsterdam, NL"

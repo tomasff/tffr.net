@@ -19,3 +19,7 @@ links = [
     { x = 'https://twitter.com/tomasff02' },
     { linkedin = 'https://www.linkedin.com/in/tomas-fernandes02/' },
 ]
+
+[security]
+  [security.funcs]
+    getenv = ['LOCATION']
