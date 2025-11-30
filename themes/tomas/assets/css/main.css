@@ -126,11 +126,6 @@ article.work-experience h3 a {
     text-decoration: none;
 }
 
-article.work-experience h3 a:hover {
-    color: #333;
-    text-decoration: underline #00e 2px wavy;
-}
-
 article.work-experience h3:first-child {
     margin-top: 0;
     margin-bottom: 0.5rem;
