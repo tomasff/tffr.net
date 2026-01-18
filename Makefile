@@ -7,5 +7,5 @@ deploy:
 
 deploy-all:
 	$(MAKE) deploy TARGET=coruscant LOCATION="London, UK"
-	$(MAKE) deploy TARGET=fre-route LOCATION="Fremont, CA"
 	$(MAKE) deploy TARGET=ams-route LOCATION="Amsterdam, NL"
+	$(MAKE) deploy TARGET=mia-route LOCATION="Miami, FL"
