@@ -1,3 +1,5 @@
+LOCATION ?= London, UK
+
 dev:
 	LOCATION="$(LOCATION)" hugo server --ignoreCache --noHTTPCache --disableFastRender
 
